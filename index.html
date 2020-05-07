@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container">
+      <div class="row">
+        <div class="col-10 offset-1">
+          <h1 class="display-3">Add soft hyphens</h1>
+          <p>
+            Soft hyphens are a way to indicate to browsers where words should
+            break if it needs to be broken accross multiple lines without adding
+            visible hyphenation. The problem with soft hyphens is that they are
+            invisible characters which makes them difficult to use. This tool
+            will visualise soft hyphens as you add them to words.
+          </p>
+          <p>
+            To learn more check out the
+            <a href="https://en.wikipedia.org/wiki/Soft_hyphen"
+              >soft hyphen wikipedia</a
+            >
+            entry
+          </p>
+          <p>
+            Soft hyphens are invisible characters are invisible which makes them
+            hard to copy and past. To help you can use this button to copy one
+            to your clipboard. You can then use the input field below to type
+            the word you want to hyphenate and paste the soft hyphen into. The
+            hypen will then be visualised in the output area. This output can
+            then be copied and used where needed.
+          </p>
+          <button class="btn btn-primary" data-clipboard-text="&shy;">
+            Copy soft hyphen
+          </button>
+          <br />
+          <br />
+
+          <div class="jumbotron">
+            <div class="display-4" id="output"></div>
+            <hr class="my-4" />
+            <div class="form-group">
+              <label for="hyphenVisualiser">Visualiser input</label>
+              <div class="input-group mb-3">
+                <input
+                  class="form-control form-control-lg"
+                  type="text"
+                  id="input"
+                  id="hyphenVisualiser"
+                  aria-describedby="hyphenHelp"
+                  placeholder="Add text to visualise"
+                  aria-label="Add text to visualise"
+                  value="in&shy;vis&shy;i&shy;ble"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-outline-primary"
+                    type="button"
+                    id="copyInput"
+                    data-clipboard-target="#input"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+              <small id="hyphenHelp" class="form-text text-muted"
+                >Paste soft hyphen characters into text to visualise the
+                invisible characters</small
+              >
+            </div>
+          </div>
+
+          <p>
+            If you're unsure of where to hyphenate a word try this
+            <a href="https://www.ushuaia.pl/hyphen/?ln=en"
+              >helpful hyphenation tool</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
+        );
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
+</html>
